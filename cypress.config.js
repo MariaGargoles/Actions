@@ -1,8 +1,9 @@
-const { defineConfig } = require("cypress");
+// cypress.config.js
+import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
-    baseUrl: "http://localhost:5173",
+    baseUrl: "http://appreact.s3-website.eu-west-3.amazonaws.com/",
     specPattern: "cypress/e2e/**/*.spec.{js,jsx,ts,tsx}",
   },
 });
