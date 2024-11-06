@@ -1,8 +1,8 @@
 import { defineConfig } from "cypress";
 
 export default defineConfig({
-  projectId: "nv41qi",
   e2e: {
-    setupNodeEvents(on, config) {},
+    baseUrl: "http://appreact.s3-website.eu-west-3.amazonaws.com/",
+    specPattern: "cypress/e2e/**/*.spec.{js,jsx,ts,tsx}",
   },
 });

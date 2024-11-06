@@ -1,8 +1,7 @@
-import { defineConfig } from "cypress";
+describe("Verificar que la página carga correctamente", () => {
+  it("Debería cargar la página principal sin errores", () => {
+    cy.visit("/");
 
-export default defineConfig({
-  e2e: {
-    baseUrl: "http://appreact.s3-website.eu-west-3.amazonaws.com/",
-    specPattern: "cypress/e2e/**/*.spec.{js,jsx,ts,tsx}",
-  },
+    cy.get("body").should("be.visible");
+  });
 });
